@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  <style>
+body {
+  font-family: poppins, sans-serif;
+  background-color:teal;
+  margin-top: 30%;
+}
+form{
+  border-radius: 20px;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: teal;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  margin-left: 33%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 54%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 10px;
+}
+.forgot{
+ text-align: center;
+  margin-bottom: 5px;
+}
+.checkbox{
+  padding-top:0px ;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+.input{
+  outline: 2px solid black;
+}
+.input:invalid{
+  outline: 2px solid red;
+  border: inherit;
+}
+.input:valid{
+  outline: 2px solid black;
+  border: inherit;
+}
+.signup{
+    font-size: 15px;
+    color: teal;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+  }
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  .signup {
+     display: block;
+     float: none;
+  }
+}
+
+ @media screen and (min-width: 960px) {
+   body{
+     margin-top: 50%;
+   }
+   button{
+     font-size: 20px;
+     text-align: center;
+     float: right;
+     width: 120px;
+   }
+   .modal-content{
+     width: 50%;
+     float: center:
+   }
+   input[type=text], input[type=password]{
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+   }
+   input.checkbox{
+     float: left;
+     margin-top: 20px;
+   }
+  label{
+    font-size: 20px;
+   }
+   .forgot{
+     float: center;
+     font-size: 20px;
+   }
+  .signup{
+    font-size: 20px;
+    margin-top: 20px;
+    float: center;
+    color: black;
+    
+  }
+ }
+ </style>
+<body>
+  <form class="modal-content animate" action="/index.html" method="post" autocomplete="off">
+    <div class="imgcontainer">
+      <img src="/img/avatar.png" alt="Avatar" class="avatar">
+    </div>
+    
+    <div class="container">
+      
+      <input class="input" type="text" placeholder="Masukkan Username" name="uname" required oninvalid="setCustomValidity('Username harus antara 3-20 karakter dan tidak menggunakan simbol')"  onvalid="setCustomValidity('')" minlength="3" maxlength="20">
+     
+      <input class="input" type="text" placeholder="Masukkan Password" name="psw" oninvalid="setCustomValidity('Password harus diisi dengan kombinasi angka & huruf, antara 6-20 karakter')" oninput="setCustomValidity('')" minlength="6" maxlength="20" required>
+     <button type="submit">Login</button>
+      <br><br>
+      <div class="forgot"><a href="#">Lupa password?</a></div>
+      <div class="signup">
+        Tidak punya akun? Silahkan <a href="signup.html">Daftar </a>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
+
